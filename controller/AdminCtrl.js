@@ -1,6 +1,19 @@
 const asyncHandler = require("express-async-handler");
 const AdminModel=require('../model/Admin');
 const { appErr, AppErr } = require("../utills/appErr.js");
+const { generateToken } = require('../utills/generateToken.js');
+
+
+
+//     const tokenuser = {
+//       id: user?.admin_id,  // Replace with actual user ID
+//       role: 'Admin', // Replace with actual role
+//   };
+
+//   // Generate token using the utility function
+//   const token = generateToken(tokenuser);
+
+
 
 exports.registerAdmin=asyncHandler(async(req,res,next)=>{
 
